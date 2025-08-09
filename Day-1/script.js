@@ -1,133 +1,103 @@
-/*console.log("Hello World");
+// console.log("HELLO WORLD");
 
-var a = 123;
+// console.log(a);
 
-console.log(a);
+// var a =123;
 
-function abc(){
-    console.log("This is function ABC");
+// console.log(a);
 
-    function hgf(){
-        console.log("This is HGF");
-    }
-    hgf();
-}*/
+// function abc(){
+//     console.log("THIS IS FUNCTION ABC");
 
-//def();
+//     function hgf(){
+//         console.log("THIS IS HGF");
+//     }
+//     hgf();
+// }
 
-/*function def(){
-    console.log("This is function DEF");
-}*/
+// abc();
 
-//abc();
+// arrow funcction
 
-//var b = 300;
+// var a =200;
+// console.log(a);
 
-//console.log(b);
+// xyz();
 
-// arrow function
+// var xyz=()=>{
+//     console.log("XYZ FUNCTION CALLED");
+// }
 
-/*var a = 200;
-console.log(a);
-xyz();
-var xyz=()=>{
-    console.log("XYZ Function called");
-}
+// let b  =300;
+// console.log(b);
 
-var b = 300;
-console.log(b);*/
-
-//console.log(b);
-//let b = 100;
-
-
-// compund statment
-// {   //grandparent
-//     var a = 100;
-//     var b = 200;
-//     var c = 300;
-//     console.log(a);
-//     console.log(b);
-//     console.log(c);
-//     console.log(x);
+// {
+//     // Compound Statement
+//     //GrandParent
+//     let a = 100;
+//     let b = 200;
+//     let c = 300;
+//     // console.log(d);
+//     // console.log(a);
+//     // console.log(b);
+//     // console.log(c);
 //     {
-//         // parent
-//         console.log(a);
-//         console.log(b);
-//         console.log(c);
+//         //Parent
 
+//         // console.log(a);
+//         // console.log(b);
+//         // console.log(c);
 //         {
-//             //child
-//             var x = 2000
+//             //Child
+
+//             let d = 200000;
+
 //             console.log(a);
 //             console.log(b);
 //             console.log(c);
 //         }
+
 //     }
 // }
 
-// try changing all these to let 
+// function abc(){
+//         var a = 100;
+//         var b = 200;
+//         var c = 300;
+//     function def(){
+//         var d =400;
+//         function ijk(){
+//             console.log(a);
+//             console.log(b);
+//             console.log(c);
+//             console.log(d);
 
-
-
-// function scoped 
-// function abc() {
-//     var a = 100
-//     var b = 200
-//     var c = 300
-//     console.log(a)
-//     console.log(b)
-//     console.log(c)
-//     function def() {
-
-//         var d = 400
-
-//         function ghi() {
-//             console.log(a)
-//             console.log(b)
-//             console.log(c)
-//             console.log(d)
 //         }
-//         ghi()
+//         ijk()
 //     }
 //     def()
 // }
 // abc()
 
-
-
-
-
-// for(var i = 0; i <= 5; i++){
-//     //console.log(i);
-//     setTimeout(()=>{
-//         console.log(i);
-//     }, 2000)
-// }
-
-
-// for(var i = 0; i <= 5; i++){
+// for (var i =0; i<=5;i++){
 //     function closure(i){
 //         setTimeout(()=>{
-//             console.log(i);
-//         }, 2000)
+//         // var a =i;
+//         console.log(i);
+//     },2000)
 //     }
-//     closure(i);
+//     closure(i)
 // }
 
+//HOF:
 
+function xyz(cb) {
+  console.log("I AM XYZ FUNCTION");
+  cb();
+}
 
-function xyz(cb){
-    console.log("I am XYZ function");
+function cb() {
+  console.log("I am CB FUNCTION");
 }
-function cb(){
-    console.log("I am CB function");
-}
+
 xyz(cb);
-
-function foodOrder(cb){
-
-
-}
-
-function pay
