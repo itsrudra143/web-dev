@@ -1,72 +1,89 @@
-// console.log("SCRIPT START")
+console.log("SCRIPT START");
 
-// // setTimeout(()=>{
-// //     console.log("I am going to College..")
-// // },4000)
+// setTimeout(()=>{
+//     console.log("I AM GOING TO RESTAURANT");
+// },4000);
 
-// // setTimeout(()=>{
-// //     console.log("I am going to Class..")
-// // },3000)
+// setTimeout(()=>{
+//     console.log("I AM Checking the Menu for ordering ");
+// },3000);
 
-// function ok(cb){
-//     console.log("This is Ok");
-//     setTimeout(cb,3000);
+// function walkInRestaurant(cb) {
+//     console.log("I am Walking Inside the Restaurant");
+//     setTimeout(cb, 3000);
 // }
 
-// function fine(cb){
-//     console.log("Youre in fine");
-//     setTimeout(cb,2000);
+// function menuCheck(cb) {
+//     console.log("I am Checking the Menu");
+//     setTimeout(cb, 2000);
+
 // }
 
-// function thankyou(cb){
-//     console.log("Thanks for being here.")
-//     setTimeout(cb,4000)
+// function foodOrder(cb) {
+//     console.log("I AM ORDERING THE FOOD");
+//     setTimeout(cb, 6000);
+
 // }
 
-// function finish(){
-//     console.log("Finish....")
-// }
-// console.log("SCRIPT END")
+// function havingLunch(cb) {
+//     console.log("I AM HAVING THE FOOD");
+//     setTimeout(cb, 8000);
 
-// ok(()=>{
-//     fine(()=>{
-//         thankyou(()=>{
-//             finish()
+// }
+
+// function payBill(cb) {
+//     console.log("I AM Paying the Bill");
+//     setTimeout(cb, 3000);
+
+// }
+
+// function walkAwayFromRes() {
+//     console.log("BYE BYE GOING HOME");
+// }
+
+// walkInRestaurant(() => {
+//     menuCheck(() => {
+//         foodOrder(() => {
+//             havingLunch(() => {
+//                 payBill(() => {
+//                     walkAwayFromRes();
+//                 })
+//             })
 //         })
 //     })
 // })
 
+// console.log("SCRIPT END");
 
-// let arr = [2,3,4,5,6,8,5]
+//ARRAY OPERATIONS
 
-// function doubleArray(arr,arr2){
-//     for(let i = 0; i<arr.length; i++){
-//         arr2[i] = 2*arr[i];
+let arr = [2, 3, 4, 6, 8, 5];
+
+// function doubleArrVal(arr){
+//     let output = []
+
+//     for (var i =0;i<arr.length;i++){
+//         output.push(arr[i]*2);
 //     }
+//     return output;
 // }
-// let arr2=[]
-// doubleArray(arr,arr2);
-// console.log(arr2);
-// console.log(arr);
 
+// const output = doubleArrVal(arr)
 
-Array.prototype.calculate = function(logic){
-    let output=[];
+// console.log(output);
 
-    for(var i =  0; i<this.length;i++){
-        output.push(logic(this[i]));
-    }
-    return output;
+Array.prototype.calculate = function (logic) {
+  let output = [];
+
+  for (var i = 0; i < this.length; i++) {
+    output.push(logic(this[i]));
+  }
+  return output;
+};
+
+function triple(x) {
+  return x * x * x;
 }
-
-function triple(x){
-    return x*x*x;
-}
-let arr = [1,2,3,4,5,6];
-
-
-
-
-let output = arr.calculate(triple);
-
+// map
+const output = arr.calculate(triple);
 console.log(output);
