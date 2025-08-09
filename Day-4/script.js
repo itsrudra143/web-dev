@@ -1,18 +1,28 @@
+console.log("SCRIPT START");
+
+// Array.prototype.mapReplica = function (logic){
+//     let output = []
+//     for( var i =0;i<this.length;i++){
+//         output.push(logic(this[i]));
+//     }
+//     return output;
+// }
+
 // let userData = [
-//     { firstName: 'Priyanshu', age: '21' },
-//     { firstName: 'Pranav', age: '20' },
-//     { firstName: 'Divesh', age: '23' },
+//   {
+//     firstName:"Priyanshu",
+//     age: "21"
+//   },
+//   {
+//     firstName:"Pranav",
+//     age: "20"
+//   },
+//   {
+//     firstName:"Divesh",
+//     age: "23"
+//   },
+
 // ]
-
-// // map and filter
-
-// let firstName = userData.map((data) => data.firstName)
-// let output = userData.filter((data) => data.age > 20)
-
-// console.log(firstName)
-// console.log(output)
-
-// PROMISES
 
 // const myPromise = new Promise((resolve, reject) => {
 //   setTimeout(() => {
@@ -20,134 +30,109 @@
 //   }, 300);
 // });
 
-// const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('I GOT PLACED')
-//     }, 3000)
-// })
-// const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('I got rejected')
-//     }, 3000)
+// const priyanshuPromise = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     reject("I GOT PLACED");
+//   }, 2000);
 // })
 
-// promise
-//     .then((res) => {
-//         console.log(res)
-//     })
-//     .catch((err) => {
-//         console.error('ERROR in first then: ', err)
-//     })
-//     .then(() => {
-//         console.log('PARTY TIME')
-//     })
-//     .catch((err) => {
-//         console.error('ERROR in second then: ', err)
-//     })
-//     .then(() => {
-//         console.log('WORKING WORKING WORKING')
-//     })
-//     .catch((err) => {
-//         console.error('ERROR in third then: ', err)
-//     })
-//     .then(() => {
-//         console.log('LAYOFF')
-//     })
-//     .catch((err) => {
-//         console.error('ERROR in fourth then: ', err)
-//     })
+// priyanshuPromise
+// .then((res)=>{
+//   console.log("PRIYANSHU GETTING SALARY 1CR")
+//    console.log(res);
+// })
+// .catch((err)=>{
+//   console.log("ERROR FOUND1: ",err)
+// })
+// .then(()=>{
+//   console.log("PARTY TIME");
+// })
+// .catch((err)=>{
+//   console.log("ERROR FOUND:2 ",err)
+// })
+// .then(() =>{
+//   console.log("WORKING WORKING WORKING");
+// })
+// .catch((err)=>{
+//   console.log("ERROR FOUND:3 ",err)
+// })
+// .then(()=>{
+//   console.log("LAYOFF");
+// })
+// .catch((err)=>{
+//   console.log("ERROR FOUND:4 ",err)
+// })
+// console.log(priyanshuPromise);
 
-// console.log(promise)
-// console.log(promise2)
+/////////////////////////////////////////////////////////
 
-// const p1 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('ASSIGNMENT COMPLETED BY YASH')
-//     }, 2000)
+// const p1 = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     resolve("Assignment Complete by PRIYANSHU");
+//   }, 2000);
 // })
 
-// const p2 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('ASSIGNMENT COMPLETED BY VINAYAK')
-//     }, 3000)
+// const p2 = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     resolve("Assignment Complete by DEVESH");
+//   }, 3000);
 // })
 
-// const p3 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('ASSIGNMENT COMPLETED BY VANSH')
-//     }, 5000)
+// const p3 = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     resolve("Assignment Complete by PRANAV");
+//   }, 5000);
 // })
 
-// const p4 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         reject('ASSIGNMENT COMPLETED BY GARG')
-//     }, 4000)
+// const p4 = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     reject("Assignment Complete by VIVEK");
+//   }, 4000);
 // })
 
-// Promise.all([p1, p2, p3, p4])
-//     .then((res) => {
-//         console.log(res)
-//     })
-//     .catch((err) => {
-//         console.log('ERROR OCCURED: ', err)
-//     })
+// Promise.all([p1,p2,p3,p4]).then((res)=> console.log(res)).catch((err)=> console.log("ERROR",err));
+// //BEHAVIOR
 
-// Promise.allSettled([p1, p2, p3, p4])
-//     .then((res) => {
-//         console.log(res)
-//     })
-//     .catch((err) => {
-//         console.log('ERROR OCCURED: ', err)
-//     })
+// all - all api chal gyi to : ALL RESULT
+// all reject -  first rejected
+// ek hogyi to uska he error ayega
 
-// Promise.race([p1, p2, p3, p4])
-//     .then((res) => {
-//         console.log(res)
-//     })
-//     .catch((err) => {
-//         console.log('ERROR OCCURED: ', err)
-//     })
+// allSettled =  array of object
+// allSettled = array of reject
+// ek do = array jo full fill or rject
 
-// Promise.any([p1, p2, p3, p4])
-//     .then((res) => {
-//         console.log(res)
-//     })
-//     .catch((err) => {
-//         console.log('ERROR OCCURED: ', err)
-//     })
+// race == first winner
+// reject == first reject
 
-// ASYNC AWAIT
+// any == any first which is resolved
 
-// const p1 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve('ASSIGNMENT COMPLETED BY VANSH')
-//     }, 2000)
+///////////////////////////////////////////////////////////////////
+
+// ASYNC await
+
+// const p1 = new Promise((resolve,reject)=>{
+//   setTimeout(() => {
+//     resolve("Assignment Complete by PRIYANSHU");
+//   }, 2000);
 // })
 
-// async function checkAssignment() {
-//     const dataAssignment = await p1
-//     console.log('Checking ASSIGNMENT: ', dataAssignment)
+// async function checkAssignment(){
+//   const dataAssignment =await p1;
+//   console.log("CHECKING THE ASSIGNMENT: ", dataAssignment)
 // }
 
-// checkAssignment()
+// checkAssignment();
 
-// FETCH
+// 'https://dummyjson.com/products' from this fetch data and just do console.log(  )
 
 async function fetchProducts() {
-    try {
-        const res = await fetch('https://dummyjson.com/products')
-        const data = await res.json()
-
-        const products = data.products.map((product) => ({
-            title: product.title,
-            description: product.description,
-            price: product.price,
-        }))
-
-        console.log(products)
-    } catch (err) {
-        console.log('ERROR OCCURED: ', err.message)
-    }
+  try {
+    const products = await fetch("https://dummyjson.com/products");
+    const data = await products.json();
+    console.log(data);
+  } catch (err) {
+    console.log("ERROR: ", err.message);
+  }
 }
 
-fetchProducts()
+fetchProducts();
