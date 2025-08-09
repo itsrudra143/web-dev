@@ -1,108 +1,144 @@
-// console.log("Start scipt");
+console.log("SCRIPT START");
 
-// function walkInRes(){
-//     setTimeout(()=>{
-//         console.log("Walking to the restaurant");
-//     },5000)
-//     setTimeout(cb,3000);
+// setTimeout(()=>{
+//     console.log("I AM GOING TO RESTAURANT");
+// },4000);
+
+// setTimeout(()=>{
+//     console.log("I AM Checking the Menu for ordering ");
+// },3000);
+
+// function walkInRestaurant(cb) {
+//     console.log("I am Walking Inside the Restaurant");
+//     setTimeout(cb, 3000);
 // }
-// // function walkInRes(cb){
-// //     console.log("I am walking to the res");
-// //     setTimeout(cb,3000);
-// // }
-// function checkMenu(cb){
-//     console.log("I am checking the menu");
-//     setTimeout(cb,2000);
+
+// function menuCheck(cb) {
+//     console.log("I am Checking the Menu");
+//     setTimeout(cb, 2000);
+
 // }
-// function orderFood(cb){
-//     console.log("I am ordering food");
-//     setTimeout(cb,5000);
+
+// function foodOrder(cb) {
+//     console.log("I AM ORDERING THE FOOD");
+//     setTimeout(cb, 6000);
+
 // }
-// function HavingLunch(cb){
-//     console.log("I am having lunch");
-//     setTimeout(cb,6000);
+
+// function havingLunch(cb) {
+//     console.log("I AM HAVING THE FOOD");
+//     setTimeout(cb, 8000);
+
 // }
-// function paybill(cb){
-//     console.log("I am paying the bill");
-//     setTimeout(cb,3000);
+
+// function payBill(cb) {
+//     console.log("I AM Paying the Bill");
+//     setTimeout(cb, 3000);
+
 // }
-// function walkout(cb){
-//     console.log("I am walking out of the res");
-//     setTimeout(cb,3000);
+
+// function walkAwayFromRes() {
+//     console.log("BYE BYE GOING HOME");
 // }
-// walkInRes(()=>{
-//     checkMenu(()=>{
-//         orderFood(()=>{
-//             HavingLunch(()=>{
-//                 paybill(()=>{
-//                     walkout(()=>{
-//                         console.log("End of script");
-//                     })
+
+// walkInRestaurant(() => {
+//     menuCheck(() => {
+//         foodOrder(() => {
+//             havingLunch(() => {
+//                 payBill(() => {
+//                     walkAwayFromRes();
 //                 })
 //             })
 //         })
 //     })
 // })
 
-// function checkMenu(){
-//     setTimeout(()=>{
-//         console.log("I am checking the menu");
-//     },2000);
+// console.log("SCRIPT END");
+
+//ARRAY OPERATIONS
+
+// let arr = [2, 3, 4, 6, 8, 5]
+
+// // function doubleArrVal(arr){
+// //     let output = []
+
+// //     for (var i =0;i<arr.length;i++){
+// //         output.push(arr[i]*2);
+// //     }
+// //     return output;
+// // }
+
+// // const output = doubleArrVal(arr)
+
+// // console.log(output);
+
+// ///////////////////////////////////////////////////
+// let cart  = ["shoes", "shirt", "wallets"]
+
+// function orderDetail(cart){
+//     // 1. Total no of products
+//     // 2. Total Amount of Products nos*1000
+// }
+// function orderSummary(){
+//     // total price and total product
+//     // then generate orderId
+
+// }
+// function paymentGateway(){
+//     // order Id, product details and price .. Payment is successful
+// }
+// function successfulOrder(){
+//     // it will all the details about the payment product namse and everything
 // }
 
-// function orderFood(){
-//     setTimeout(()=>{
-//         console.log("I am ordering the food");
-//     },5000);
+/// PROTOTYPE ARRAY FILTER
+
+// const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+// const result = words.filter((word) => word.length > 6);
+
+// console.log(result);
+
+////// map function
+
+var arr1 = [2, 4, 67, 8, 9, 3];
+
+// const doubleValues = arr.map((x)=> x*2);
+// console.log(doubleValues);
+
+// Array.prototype.mapReplica = function (logic){
+//     let output = []
+//     for( var i =0;i<this.length;i++){
+//         output.push(logic(this[i]));
+//     }
+//     return output;
 // }
 
+// const doubleValues = arr.map((x)=> x*2);
 
-var cart=["Shoes","T-shirt","Watches","Cap"];
+// function doubleValue(x){
+//     return x*2
+// }
+// const myOutput = arr1.mapReplica((x)=>x*2)
+// console.log(myOutput)
 
-function createOrder(cart,cb) {
-    
-        let price = cart.length * 1000;
-        let noOfItem = cart.length;
-        console.log(" Items: " + noOfItem +"  Order created: value:" + price );
-        setTimeout(() => {
-             cb(price, noOfItem);
-    }, 2000);
-}
+// REDUCE FUNCTION
 
-function placeOrder(price, noOfItem, cb) {
-    
-        let orderId = Math.floor(Math.random() * 10000);
-        console.log("Order placed! ID:", orderId);
-        setTimeout(() => {
-         cb(orderId, price, noOfItem);
-    }, 5000); 
-}
+const array1 = [1, 2, 3, 4];
 
-function orderPayment(orderId, price, noOfItem, cb) {
-    setTimeout(() => {
-        console.log(`Payment of ${price} for ${noOfItem} items (Order ID: ${orderId}) successful!`);
-         cb(orderId, price, noOfItem);
-    }, 3000);
-}
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
 
-function orderStatus(cart, price, noOfItem, orderId) {
-    setTimeout(() => {
-        console.log("Order Summary-->");
-        console.log("Number of Items:", noOfItem);
-        console.log("Total Price: Rs." + price);
-        console.log("Order ID:", orderId);
-        console.log("Payment Status: Successful");
-        console.log("Order Status: Delivered");
-    }, 5000);
-}
+console.log(sumWithInitial);
+// Expected output: 10
 
-createOrder(cart, function(price, noOfItem) {
-    placeOrder(price, noOfItem, function(orderId, price, noOfItem) {
-        orderPayment(orderId, price, noOfItem, function(cart, price, noOfItem, orderId) {
-            orderStatus(cart, price, noOfItem, orderId);
-        });
-    });
-});
+const sumOfAll = array1.reduce(function (acc, curr) {
+  acc = acc + curr;
+  return acc;
+}, 0);
 
-
-
+console.log(sumOfAll);
