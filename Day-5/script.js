@@ -1,99 +1,99 @@
-// function welcomeStudents(welcomeMessage, goodbyeMessage) {
-//     console.log(
-//         welcomeMessage +
-//             ' ' +
-//             this.studentName +
-//             ' is a student of class ' +
-//             this.studentClass +
-//             ' ' +
-//             goodbyeMessage
-//     )
+console.log("SCRIPT START");
+
+// //CALL FUNCTION
+
+// // function greet() {
+// //   console.log(this.animal, "typically sleep between", this.sleepDuration);
+// // }
+
+// // const obj = {
+// //   animal: "cats",
+// //   sleepDuration: "12 and 16 hours",
+// // };
+
+// // greet.call(obj);
+
+// function welcomeStudents(welcomeMessage,goodbyeMessage){
+
+//   return `${welcomeMessage} ${this.studentName} is a student of class ${this.studentClass} ${goodbyeMessage}`
 // }
 
 // const student1 = {
-//     studentName: 'Yash',
-//     studentClass: 'G4',
+//   studentName:"Paras",
+//   studentClass:"G4"
 // }
+
 // const student2 = {
-//     studentName: 'Arnav',
-//     studentClass: 'G6',
+//   studentName:"Devesh",
+//   studentClass:"G6"
 // }
 
-// // CALL
+// // call
 
-// welcomeStudents.call(student1, 'Good Morning', 'Bye')
-// welcomeStudents.call(student2, 'Good Evening', 'Tata Bye Bye')
+// welcomeStudents.call(student1,"Good Morning", "Bye");
+// welcomeStudents.call(student2,"Good Evening", "TATA BYE BYE");
 
-// // APPLY
+// //apply
 
-// welcomeStudents.apply(student1, ['Good Morning', 'Bye'])
-// welcomeStudents.apply(student2, ['Good Evening', 'Tata Bye Bye'])
+// welcomeStudents.apply(student1,["Good Morning", "Bye"]);
+// welcomeStudents.apply(student2,["Good Evening", "TATA BYE BYE"]);
 
-// // BIND
-// const s1 = welcomeStudents.bind(student1, 'Good Morning', 'Bye')
-// const s2 = welcomeStudents.bind(student2, 'Good Evening', 'Tata Bye Bye')
+// //bind
 
-// s1()
-// s2()
+// const s1 = welcomeStudents.bind(student1,"Good Morning", "Bye");
+// // const s2 = welcomeStudents.bind(student2,"Good Evening", "TATA BYE BYE");
 
-// // NORMAL FUNCTION
+// console.log(s1());
+// console.log(s2());
 
-// function sumOfThree(a, b, c) {
-//     console.log(a + b + c)
+//CURRYING
+
+// function sumOfThree(a,b,c){
+//   console.log(a+b+c);
 // }
 
-// sumOfThree(1, 2, 3)
+// sumOfThree(10,20,30)
 
-// // CURRIED FUNCTION
+// CURRIED FUNCTION
 
-// function sumOfThree(a) {
-//     return function (b) {
-//         return function (c) {
-//             return a + b + c
-//         }
+// function sumOfThree(a){
+//   return function(b){
+//     return function(c){
+//       console.log(a+b+c);
 //     }
+//   }
 // }
 
-// console.log(sumOfThree(2)(4)(6))
+// console.log(sumOfThree(20)(30)(40))
 
-// EVENT CAPTURING & EVENT BUBBLING
+//SUBWAY
 
-const grandParent = document.getElementById('grandParent')
-const parent = document.getElementById('parent')
-const child = document.getElementById('child')
+// 1. Choose bread - Garlic Bread/ Multigrain
+// 2. Which Patty Do you want?
+// 3. With Cheese or without?
 
-// grandParent.addEventListener('click', () => {
-//     console.log('GRANDPARENT CLICKED')
-// })
+// function chooseBread(bread){
+//   return function(patty){
+//     return function(cheese){
+//       console.log(bread + patty + cheese);
+//     }
+//   }
+// }
 
-// parent.addEventListener('click', () => {
-//     console.log('PARENT CLICKED')
-// })
+//EVENT CAPTURING AND BUBBLING
 
-// child.addEventListener('click', () => {
-//     console.log('CHILD CLICKED')
-// })
+const grandParent = document.getElementById("grandParent");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
-grandParent.addEventListener(
-    'click',
-    () => {
-        console.log('GRANDPARENT CLICKED')
-    },
-    true
-)
+grandParent.addEventListener("click", () => {
+  console.log("GRANDPARENT CLICKED!!");
+});
 
-parent.addEventListener(
-    'click',
-    () => {
-        console.log('PARENT CLICKED')
-    },
-    true
-)
+parent.addEventListener("click", () => {
+  console.log("PARENT CLICKED!!");
+});
 
-child.addEventListener(
-    'click',
-    () => {
-        console.log('CHILD CLICKED')
-    },
-    true
-)
+child.addEventListener("click", () => {
+  console.log("Child CLICKED!!");
+});
