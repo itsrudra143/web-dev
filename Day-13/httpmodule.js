@@ -5,7 +5,7 @@ const blogPost = [
     {
         "blogTitle" : "THIS IS TILE OF BLOG",
         "blogDescription":"THIS IS DESCRIPTION OF BLOG",
-        "authorBlog": "Pransh",
+        "authorBlog": "Rudrakshi",
         "date":"22 July"
 
     }

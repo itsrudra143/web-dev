@@ -1,18 +1,13 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-
-
-
 
 // app.get('/ab?cd', (req, res) => {
 //   res.send('ab?cd')
 // })
 
-
 // app.get(/.*fly$/, (req, res) => {
 //   res.send('/.*fly$/')
 // })
-
 
 // const isLogged = function (req,res,next){
 //   console.log("LOGGED 1 IN USER");
@@ -70,59 +65,55 @@ const app = express();
 //   res.send("THIS IS Payment PAGE")
 // });
 
-
-
 ////////////////////////////// ERROR HANDLER /////////////////////////
 
-
-app.get("/",(req,res)=>{
-  try{
+app.get("/", (req, res) => {
+  try {
     // res.send("THIS IS HOME PAGE")
-    throw new Error("API DATA NAHI AYA")
-  }catch(err){
+    throw new Error("API DATA NAHI AYA");
+  } catch (err) {
     res.status(500).send("ERROR OCCURED " + err.message);
   }
 });
 
-app.get("/cart",(req,res)=>{
-    try{
-    res.send("THIS IS cart PAGE")
-  }catch(err){
+app.get("/cart", (req, res) => {
+  try {
+    res.send("THIS IS cart PAGE");
+  } catch (err) {
     res.status(500).send("ERROR OCCURED " + err.message);
   }
 });
 
-app.get("/payment",(req,res)=>{
-  try{
-    res.send("THIS IS Payment PAGE")
-  }catch(err){
+app.get("/payment", (req, res) => {
+  try {
+    res.send("THIS IS Payment PAGE");
+  } catch (err) {
     res.status(500).send("ERROR OCCURED " + err.message);
   }
 });
 
 //Intern
 
-app.get("/internurl",(req,res)=>{
+app.get("/internurl", (req, res) => {
   // res.send("THIS IS INTERN KA URL")
-  throw new Error("API INTERN DATA NAHI AYA")
+  throw new Error("API INTERN DATA NAHI AYA");
 });
 
-//WILDCARD ERROR 
+//WILDCARD ERROR
 
-// ALWAYS IN LAST ERROR HANDLER 
+// ALWAYS IN LAST ERROR HANDLER
 
 app.use((err, req, res, next) => {
   // console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
-
+  res.status(500).send("Something broke!");
+});
 
 //ERROR HANDLER TO HANDLE ANY PATH
 
-app.use("/",(req,res)=>{
-  res.status(404).send("BHAI PLEASE PUT RIGHT PATH !!!")
-})
+app.use("/", (req, res) => {
+  res.status(404).send("BHAI PLEASE PUT RIGHT PATH !!!");
+});
 
 app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+  console.log("Server running on http://localhost:3000");
 });
