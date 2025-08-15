@@ -10,15 +10,15 @@ console.log("SCRIPT START");
 
 // let userData = [
 //   {
-//     firstName:"Priyanshu",
+//     firstName:"rudrakshi",
 //     age: "21"
 //   },
 //   {
-//     firstName:"Pranav",
+//     firstName:"samar",
 //     age: "20"
 //   },
 //   {
-//     firstName:"Divesh",
+//     firstName:"sakshi",
 //     age: "23"
 //   },
 
@@ -30,15 +30,15 @@ console.log("SCRIPT START");
 //   }, 300);
 // });
 
-// const priyanshuPromise = new Promise((resolve,reject)=>{
+// const rudrakshiPromise = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
 //     reject("I GOT PLACED");
 //   }, 2000);
 // })
 
-// priyanshuPromise
+// rudrakshiPromise
 // .then((res)=>{
-//   console.log("PRIYANSHU GETTING SALARY 1CR")
+//   console.log("rudrakshi GETTING SALARY 1CR")
 //    console.log(res);
 // })
 // .catch((err)=>{
@@ -62,31 +62,31 @@ console.log("SCRIPT START");
 // .catch((err)=>{
 //   console.log("ERROR FOUND:4 ",err)
 // })
-// console.log(priyanshuPromise);
+// console.log(rudrakshiPromise);
 
 /////////////////////////////////////////////////////////
 
 // const p1 = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
-//     resolve("Assignment Complete by PRIYANSHU");
+//     resolve("Assignment Complete by rudrakshi");
 //   }, 2000);
 // })
 
 // const p2 = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
-//     resolve("Assignment Complete by DEVESH");
+//     resolve("Assignment Complete by sakshi");
 //   }, 3000);
 // })
 
 // const p3 = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
-//     resolve("Assignment Complete by PRANAV");
+//     resolve("Assignment Complete by samar");
 //   }, 5000);
 // })
 
 // const p4 = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
-//     reject("Assignment Complete by VIVEK");
+//     reject("Assignment Complete by rudraksh");
 //   }, 4000);
 // })
 
@@ -112,7 +112,7 @@ console.log("SCRIPT START");
 
 // const p1 = new Promise((resolve,reject)=>{
 //   setTimeout(() => {
-//     resolve("Assignment Complete by PRIYANSHU");
+//     resolve("Assignment Complete by rudrakshi");
 //   }, 2000);
 // })
 
